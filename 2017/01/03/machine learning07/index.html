@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Regularization for Deep Learning | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Regularization for Deep Learning正则化其实和lr以及线性的正则化方法差不多，主要是为了防止过拟合。
+推导给出了为什么L2可以防止w过大。主要是在每次权重更新的时候，weight前面的系数是小于1的，不过总体来看，不好说weight到底是变大还是变小。这样L2正则项有办法防止过拟合。实验说明当w不够大的时候拟合的比较好。
+L1正则化更容易使得weight为0.推导中可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Regularization for Deep Learning">
+<meta property="og:url" content="http://yoursite.com/2017/01/03/machine learning07/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Regularization for Deep Learning正则化其实和lr以及线性的正则化方法差不多，主要是为了防止过拟合。
+推导给出了为什么L2可以防止w过大。主要是在每次权重更新的时候，weight前面的系数是小于1的，不过总体来看，不好说weight到底是变大还是变小。这样L2正则项有办法防止过拟合。实验说明当w不够大的时候拟合的比较好。
+L1正则化更容易使得weight为0.推导中可">
+<meta property="og:updated_time" content="2017-01-03T12:59:01.709Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Regularization for Deep Learning">
+<meta name="twitter:description" content="Regularization for Deep Learning正则化其实和lr以及线性的正则化方法差不多，主要是为了防止过拟合。
+推导给出了为什么L2可以防止w过大。主要是在每次权重更新的时候，weight前面的系数是小于1的，不过总体来看，不好说weight到底是变大还是变小。这样L2正则项有办法防止过拟合。实验说明当w不够大的时候拟合的比较好。
+L1正则化更容易使得weight为0.推导中可">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-machine learning07" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/03/machine learning07/" class="article-date">
+  <time datetime="2017-01-03T12:02:57.000Z" itemprop="datePublished">2017-01-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Regularization for Deep Learning
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Regularization-for-Deep-Learning"><a href="#Regularization-for-Deep-Learning" class="headerlink" title="Regularization for Deep Learning"></a>Regularization for Deep Learning</h3><p>正则化其实和lr以及线性的正则化方法差不多，主要是为了防止过拟合。</p>
+<p>推导给出了为什么L2可以防止w过大。<br>主要是在每次权重更新的时候，weight前面的系数是小于1的，不过总体来看，不好说weight到底是变大还是变小。<br>这样L2正则项有办法防止过拟合。<br>实验说明当w不够大的时候拟合的比较好。</p>
+<p>L1正则化更容易使得weight为0.<br>推导中可以看出，当w大于0，w会变小，w小于0，w会变大（因为sign的缘故）。</p>
+<p>###dropout<br>是在更新的时候随机更新一半的值，下次更新另外一半的w。<br>这样也可以防止过拟合。 相当于训练了很多个一半权值的神经网络。<br>随着训练进行，大部分半数网络都给出正确结果。<br>而且dropout算起来很快很迅速。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/03/machine learning07/" data-id="cixifnb360001s0dga449zc8e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/03/my-new-post/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">my new post</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/01/03/machine learning07/">Regularization for Deep Learning</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/03/my-new-post/">my new post</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/03/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

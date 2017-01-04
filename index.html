@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>yuanxiaobin</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
@@ -33,7 +33,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">yuanxiaobin</a>
+        <a href="/" id="logo">Hexo</a>
       </h1>
       
     </div>
@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,86 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-machine learning07" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/03/machine learning07/" class="article-date">
+  <time datetime="2017-01-03T12:02:57.000Z" itemprop="datePublished">2017-01-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/03/machine learning07/">Regularization for Deep Learning</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Regularization-for-Deep-Learning"><a href="#Regularization-for-Deep-Learning" class="headerlink" title="Regularization for Deep Learning"></a>Regularization for Deep Learning</h3><p>正则化其实和lr以及线性的正则化方法差不多，主要是为了防止过拟合。</p>
+<p>推导给出了为什么L2可以防止w过大。<br>主要是在每次权重更新的时候，weight前面的系数是小于1的，不过总体来看，不好说weight到底是变大还是变小。<br>这样L2正则项有办法防止过拟合。<br>实验说明当w不够大的时候拟合的比较好。</p>
+<p>L1正则化更容易使得weight为0.<br>推导中可以看出，当w大于0，w会变小，w小于0，w会变大（因为sign的缘故）。</p>
+<p>###dropout<br>是在更新的时候随机更新一半的值，下次更新另外一半的w。<br>这样也可以防止过拟合。 相当于训练了很多个一半权值的神经网络。<br>随着训练进行，大部分半数网络都给出正确结果。<br>而且dropout算起来很快很迅速。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/03/machine learning07/" data-id="cixifnb360001s0dga449zc8e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-my-new-post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/03/my-new-post/" class="article-date">
+  <time datetime="2017-01-03T12:02:57.000Z" itemprop="datePublished">2017-01-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/03/my-new-post/">my new post</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="接下来的事情"><a href="#接下来的事情" class="headerlink" title="接下来的事情"></a>接下来的事情</h3><p>先看看mit 那本<a href="http://www.deeplearningbook.org/" target="_blank" rel="external">deep learning</a>。 然后在tensorflow上可以实现一些demo。</p>
+<p>leetcode可以写写，感觉好久不写算法题生疏不少。</p>
+<p>lda,gmm,hmm以及crf基本都看过了。 lda写了cvb 和cvb0, gibbs sampling，scvb0。</p>
+<p>接下来也可以尝试把scvb0分布式的写了。 然后把spark上的em lda 和variational lda移植到我们的系统上去 lda有三四种变分推断的方法可以解了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/03/my-new-post/" data-id="cixifnb360002s0dgi6jr0nfu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -96,7 +176,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/03/hello-world/" data-id="cixhfquqz000074dgm5n2d98p" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/01/03/hello-world/" data-id="cixifnb2q0000s0dg0oj1heji" class="article-share-link">Share</a>
       
       
     </footer>
@@ -131,9 +211,17 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/01/03/machine learning07/">Regularization for Deep Learning</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/03/my-new-post/">my new post</a>
+          </li>
         
           <li>
             <a href="/2017/01/03/hello-world/">Hello World</a>
@@ -152,7 +240,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
